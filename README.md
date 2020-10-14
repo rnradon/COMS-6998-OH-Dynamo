@@ -46,12 +46,9 @@ This identifies table items. No two items share a key. DynamoDB uses two types o
 - **Partition Key** − This simple primary key consists of a single attribute referred to as the “partition key.” Internally, DynamoDB uses the key value as input for a hash function to determine storage.
 
 - **Partition Key and Sort Key** − This key, known as the “Composite Primary Key”, consists of two attributes.
+    1. The partition key and
+    2. The sort key.
 
-- The partition key and
-
-- The sort key.
-
--
 
 DynamoDB applies the first attribute to a hash function, and stores items with the same partition key together; with their order determined by the sort key. **Items can share partition keys, but not sort keys.**
 
