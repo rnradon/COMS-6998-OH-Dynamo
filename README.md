@@ -37,3 +37,15 @@ DynamoDB uses two types of secondary indexes −
 -   **Global Secondary Index**  − This index possesses partition and sort keys, which can differ from table keys.
     
 -   **Local Secondary Index**  − This index possesses a partition key identical to the table, however, its sort key differs.
+
+________
+
+## Demos
+- Create a New Table: examples/create_table.py creates a new table 'CourseAssistants' with PrimaryKey as id
+- Insert Items: examples/insert_item.py inserts the list of TAs with their OH Timings to the table
+- Get Item: examples/get_item.py fetches the item for the given key
+- Query Item: examples/query_item.py will query the table where the condition matches the input condition
+- Delete Item: examples/delete_item.py deletes the item given the Primary Key
+- Delete Table: examples/delete_table.py deletes the entire table
+- Create Table with GSI: examples/create_table_gsi.py creates another table again named as 'CourseAssistants' (as we deleted the one before), but now with a GSI as name.
+- Query Item with GSI: examples/query_item_gsi.py will query the new table, now with GSI. First we needed the ID to fetch the results, but now can fetch the results just with the name attribute.
